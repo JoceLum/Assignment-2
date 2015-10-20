@@ -255,7 +255,7 @@ img {
 
      .banner {
           background-image: url(images/robyn_back_2.jpg);
-          background-attachment: scroll;
+          background-attachment: fixed;
           height: 70%;
      }   
 
