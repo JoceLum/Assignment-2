@@ -1,0 +1,173 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+ .clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+ }
+
+ * {
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+
+ * {
+     box-sizing: border-box;
+} 
+
+body {
+     background-image: url(images/dark_mosaic_pattern.png);
+     color: white;
+     font-family: 'Source Sans Pro', sans-serif;
+ }    
+
+ img {
+     max-width: 100%;
+ }
+
+ /*START navbar styling*/
+ .navbar-flex {
+     background-image: linear-gradient(to bottom, #2BCFB1, #45EAED);
+     position: fixed;
+     z-index: 2;
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     margin: 0;
+}
+
+.navbar-flex li {
+     list-style-type: none;
+     display: inline-block;
+     position: relative;
+}
+
+.navbar-flex li a {
+     color: #8C6685;
+     font-size: 18px;
+     text-decoration: none;
+     text-transform: uppercase;
+     display: inline-block;
+     font-weight: bold;
+     padding: 10px;
+     transition: all 0.5s;
+}
+
+.navbar-flex li ul.subNav {
+     display: none;
+     position: absolute;
+     background-image: linear-gradient(to bottom, #45EAED, #90FBFC);
+     width: 100%;
+     text-align: center;
+     padding: 5px 0;
+}
+
+.navbar-flex li:hover ul.subNav {
+     display: block;
+}
+
+.navbar-flex li a:hover {
+     color: #8D28BD;
+}
+ /*END navbar styling*/  
+
+/*START banner styling*/
+.banner {
+     background-image: url(images/robyn-2.jpg);
+     background-size: cover;
+     background-attachment: fixed;
+     position: relative;
+     max-width: 100%;
+     height: 400px;
+}
+
+.banner h1 {
+     font-family: 'Rock Salt', cursive;
+     position: absolute;
+     top: 80px;
+     left: 50px;
+     font-size: 70px;
+     color: #AD9DD4;
+}
+/*END banner styling*/
+
+/*START merch section styling*/
+.merch-flex { 
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     padding: 40px;
+}
+
+.item-flex {
+     display: flex;
+     flex-wrap: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+}
+
+.item-flex h5, p {
+     text-align: center;
+     text-transform: uppercase;
+     margin: 5px;
+}
+
+.item-flex img:hover {
+     opacity: 0.7;
+}
+
+.item-flex input.order,
+.item-flex input.order-cd {
+     border: 1px solid rgba(255,255,255,0.6);
+     background: transparent;
+     color: white;
+     text-transform: uppercase;
+     font-size: 12px;
+     padding: 5px;
+}
+
+.item-flex input.order {
+     margin-left: 10px;
+}
+
+.item-flex input.order:hover,
+.item-flex input.order-cd:hover {
+     border: 1px solid white;
+}
+/*END merch section styling*/
+
+/* media queries */
+@media (max-width: 610px) {
+     .navbar-flex {
+          flex-direction: column;
+          text-align: center;
+          padding: 0;
+          margin: 0 auto;
+          position: static;
+     }
+
+     .navbar-flex li ul.subNav {
+          position: static; 
+          background: transparent;
+     }
+
+     .banner {
+          background-image: url(images/robyn-3.jpg); 
+          background-attachment: scroll;
+          height: 70%;
+     }
+
+     .banner h1 {
+          font-size: 45px;
+          top: -50px;
+          left: 15px;
+     }
+}
+
