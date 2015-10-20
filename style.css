@@ -94,6 +94,11 @@ img {
      left: 70px;
      top: 200px;
 }
+
+.banner h1 {
+     animation-duration: 1s;
+     animation-delay: 1s;
+}
 /*END banner styling*/
 
 /*START about section styling*/
